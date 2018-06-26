@@ -12,7 +12,7 @@ class BurpExtender(IBurpExtender, IHttpListener):
     def registerExtenderCallbacks(self, callbacks):
         self._callbacks = callbacks
         self._helpers = callbacks.getHelpers()
-        self._callbacks.setExtensionName("Unicode To Chinese Test")
+        self._callbacks.setExtensionName("Unicode To Chinese")
         callbacks.registerHttpListener(self)
 
     def processHttpMessage(self, toolFlag, messageIsRequest, messageInfo):
